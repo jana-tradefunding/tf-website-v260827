@@ -48,7 +48,7 @@ details.faq summary::-webkit-details-marker{display:none}
 details.faq summary::after{content:'Show';color:var(--skyblue);font-weight:600;font-size:0.82rem;flex-shrink:0}
 details.faq[open] summary::after{content:'Hide'}
 details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max-width:680px}
-@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-factor-grid{grid-template-columns:1fr}}
+@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-layout>*{min-width:0}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-rail a{white-space:normal}.ga-factor-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="channel-commercial">
@@ -147,7 +147,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 
 <section id="comparison-ledger">
 <h3>Side-by-Side: Scope, Rate and Control</h3>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Dimension</th><th>Invoice Finance</th><th>Debtor Finance</th></tr></thead>
 <tbody>
 <tr><td>Scope</td><td>One invoice at a time, by choice</td><td>Whole ledger, or an agreed segment, continuously</td></tr>
@@ -158,6 +159,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Best For</td><td>One-off cash gaps, seasonal spikes, testing the product</td><td>Ongoing working capital, businesses on 30&ndash;90 day terms</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section class="ga-leadgen">
@@ -200,7 +202,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <div class="ga-factor-card"><div>Invoice Terms</div><div>30&ndash;90 day trade terms are the sweet spot; invoices due in under 14 days are rarely worth funding once fees are applied.</div></div>
 <div class="ga-factor-card"><div>Time Trading</div><div>6+ months typical for non-bank; debtor finance facilities from bank-affiliated financiers often want 12+ months.</div></div>
 </div>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Document</th><th>Invoice Finance (Spot)</th><th>Debtor Finance (Facility)</th></tr></thead>
 <tbody>
 <tr><td>The invoice itself</td><td>Required, plus proof of delivery</td><td>Required per drawdown</td></tr>
@@ -210,6 +213,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Identification</td><td>Director ID + licence</td><td>Director ID + licence</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section>

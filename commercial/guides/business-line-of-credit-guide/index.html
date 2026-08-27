@@ -48,7 +48,7 @@ details.faq summary::-webkit-details-marker{display:none}
 details.faq summary::after{content:'Show';color:var(--skyblue);font-weight:600;font-size:0.82rem;flex-shrink:0}
 details.faq[open] summary::after{content:'Hide'}
 details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max-width:680px}
-@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-factor-grid{grid-template-columns:1fr}}
+@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-layout>*{min-width:0}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-rail a{white-space:normal}.ga-factor-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="channel-commercial">
@@ -149,7 +149,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 
 <section id="revolving-vs-term">
 <h3>Revolving vs. Term &mdash; Line of Credit vs. Term Loan vs. Overdraft</h3>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Product</th><th>Facility Type</th><th>Interest Basis</th><th>Best Use Case</th></tr></thead>
 <tbody>
 <tr><td>Line of Credit</td><td>Revolving, redraw as repaid</td><td>Daily interest on drawn balance only</td><td>Ongoing or seasonal working capital</td></tr>
@@ -157,12 +158,14 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Overdraft</td><td>Buffer on transaction account</td><td>Interest on the negative balance only</td><td>Short, occasional cash flow dips</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="rates-by-lender-type">
 <h2>Rate Benchmarks by Lender Tier (2026)</h2>
 <p style="margin-bottom:24px">Line of credit facilities generally price a few points above an equivalent secured term loan from the same lender &mdash; the revolving structure and the undrawn limit the lender has to keep available both add risk the rate has to cover.</p>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Lender Tier</th><th style="text-align:right">Rate Range (p.a.)</th></tr></thead>
 <tbody>
 <tr><td>Big 4 Banks</td><td style="text-align:right">9% &ndash; 12.5%</td></tr>
@@ -172,6 +175,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Private Lenders</td><td style="text-align:right">20% &ndash; 40%</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="cost-example">
@@ -204,7 +208,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <div class="ga-factor-card"><div>Existing Debt Load</div><div>Other facilities reduce the serviceable limit a lender will approve.</div></div>
 <div class="ga-factor-card"><div>Credit Score</div><div>A clean file broadens the panel; defaults or late payments narrow it to non-bank options.</div></div>
 </div>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Security Type</th><th>Typical Limit</th><th>Basis</th></tr></thead>
 <tbody>
 <tr><td>Unsecured</td><td>Up to $250,000</td><td>8&ndash;15% of annual revenue</td></tr>
@@ -212,6 +217,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Property-Backed</td><td>$3M+</td><td>Loan-to-value ratio dependent</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="eligibility-and-documents">
@@ -223,7 +229,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <div class="ga-factor-card"><div>Credit File</div><div>No active defaults for bank tier; non-bank options exist otherwise.</div></div>
 <div class="ga-factor-card"><div>Business Structure</div><div>Company, trust, or sole trader; ABN active 6+ months.</div></div>
 </div>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Document</th><th>Fintech / Non-Bank</th><th>Banks</th></tr></thead>
 <tbody>
 <tr><td>Bank statements</td><td>3&ndash;6 months</td><td>6&ndash;12 months</td></tr>
@@ -232,6 +239,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Identification</td><td>Director ID + licence</td><td>Director ID + licence</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section>

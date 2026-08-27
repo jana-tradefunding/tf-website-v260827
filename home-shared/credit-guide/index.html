@@ -50,6 +50,12 @@
 .lg-step-body p { font-size: 14px; line-height: 1.6; }
 .lg-next { background: var(--bg-soft); padding: 64px 24px; }
 .lg-next-inner { max-width: var(--max-width-prose); margin: 0 auto; }
+@media (max-width: 640px) {
+  .lg-kv-row { grid-template-columns: 1fr; gap: 4px; }
+  .lg-kv-row span:last-child { overflow-wrap: anywhere; }
+  .lg-table-row { grid-template-columns: 1fr; }
+  .lg-table-row div:not(:first-child) { border-left: none; border-top: 1px solid var(--border-neutral); }
+}
 </style>
 </head>
 <body>

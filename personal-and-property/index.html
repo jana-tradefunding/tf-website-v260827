@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../assets/css/components.css">
 <style>
 .hero-grid{max-width:var(--max-width-wide);margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 460px;gap:56px;align-items:center;align-content:center}
-.hero-title{margin:22px 0 0;font-weight:600;font-size:clamp(2.1rem,3.6vw,3rem);line-height:1.14;letter-spacing:var(--ls-heading);color:var(--navy);max-width:560px}
+.hero-title{margin:22px 0 0;font-weight:600;font-size:clamp(2.1rem,3.6vw,3rem);line-height:1.08;letter-spacing:var(--ls-heading);color:var(--navy);max-width:560px}
 .hero-sub{margin:22px 0 0;font-size:1.05rem;color:var(--text-secondary);line-height:1.7;max-width:480px}
 .rate-card{background:#fff;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);border:1px solid var(--border);padding:26px}
 .rate-row{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-radius:var(--radius-md);background:var(--bg-soft);margin-bottom:10px}
@@ -46,6 +46,15 @@
   .hero-grid{grid-template-columns:1fr}
   .service-grid,.stats-grid{grid-template-columns:1fr 1fr}
   .stats-grid > *:first-child{border-right:none !important}
+}
+@media (max-width:400px){
+  .pathway-card{padding:24px}
+  .day-pill{padding:9px 4px}
+}
+@media (max-width:520px){
+  .container[style*="justify-content:space-between"]{justify-content:center}
+  .container[style*="justify-content:space-between"] input[style*="width:220px"]{width:100%;flex:1}
+  .container[style*="justify-content:space-between"] > div[style*="display:flex"]{width:100%}
 }
 </style>
 </head>
@@ -191,7 +200,7 @@
 
 <!-- TWO PATHWAYS -->
 <section id="pathways" style="background:var(--light-bg);padding:var(--section-y) 0">
-<div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:26px">
+<div class="container tf-pathways-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px">
 
 <div class="pathway-card">
 <p style="font-family:var(--font-heading);font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:var(--ls-label);color:var(--peach);margin-bottom:12px">Enquire Online</p>

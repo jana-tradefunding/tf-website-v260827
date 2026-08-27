@@ -62,7 +62,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .ct-output-value{font-weight:700;color:var(--skyblue)}
 .ct-hr{height:1px;background:rgba(255,255,255,0.15);margin:16px 0}
 .ct-verdict{background:rgba(255,255,255,0.08);border-radius:6px;padding:16px 18px;font-size:0.95rem;font-weight:600;color:#fff;line-height:1.5}
-@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-factor-grid{grid-template-columns:1fr}.ct-calc-grid{grid-template-columns:1fr!important}}
+@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-layout>*{min-width:0}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-rail a{white-space:normal}.ga-factor-grid{grid-template-columns:1fr}.ct-calc-grid{grid-template-columns:1fr!important}.ct-calc-grid>*{min-width:0}}
 </style>
 </head>
 <body class="channel-commercial">
@@ -157,7 +157,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 <h2>Four Ways to Fund Business Equipment</h2>
 <p style="margin-bottom:16px">Every equipment finance decision comes down to one of four structures. They differ in who owns the asset, when GST is claimed, and what &mdash; if anything &mdash; is owed at the end of the term.</p>
 <p style="margin-bottom:24px"><strong style="color:var(--navy)">Outright purchase</strong> means paying cash from working capital or a general business loan. No lender, no security over the asset, but it ties up cash that could otherwise fund growth. <strong style="color:var(--navy)">Chattel mortgage</strong> is the most common structure for owner-operators: the lender funds the purchase, you own the asset from settlement, and the loan is secured by a mortgage over the equipment itself rather than a lease. <strong style="color:var(--navy)">Finance lease</strong> flips that: the financier legally owns the asset for the term, you make the repayments, and a residual value (commonly around 10&ndash;20% of the purchase price) falls due at the end &mdash; which you then pay out, refinance, or return. <strong style="color:var(--navy)">Operating lease</strong> is closer to a long-term rental: you never own the asset, repayments are typically lower, and the equipment (and its depreciation risk) sits with the lessor, not your balance sheet.</p>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Structure</th><th>Ownership</th><th>Balance Sheet</th><th>GST Treatment</th><th>Typical Term</th><th>Best For</th></tr></thead>
 <tbody>
 <tr><td>Outright Purchase</td><td>Immediate</td><td>Asset recorded, no liability</td><td>Full input credit on purchase</td><td>N/A</td><td>Cash-rich businesses avoiding finance cost entirely</td></tr>
@@ -166,6 +167,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 <tr><td>Operating Lease</td><td>Never (unless a purchase option is exercised)</td><td>Off balance sheet &mdash; rental expense only</td><td>Credit claimed on each rental payment</td><td>1&ndash;4 years</td><td>Equipment that dates quickly, or businesses wanting no residual risk</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="tax-and-ppsr">
@@ -242,7 +244,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 <section id="rates-by-lender-type">
 <h2>Rate Benchmarks by Lender Tier (2026)</h2>
 <p style="margin-bottom:24px">Equipment finance rates vary by lender tier and asset type &mdash; newer, more liquid assets (trucks, late-model excavators) attract sharper pricing than specialised or older equipment.</p>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Lender Tier</th><th style="text-align:right">Rate Range (p.a.)</th></tr></thead>
 <tbody>
 <tr><td>Big 4 Banks</td><td style="text-align:right">7% &ndash; 9.5%</td></tr>
@@ -252,6 +255,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 <tr><td>Private / Non-Conforming Lenders</td><td style="text-align:right">14% &ndash; 18%</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section class="ga-leadgen">

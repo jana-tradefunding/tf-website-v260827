@@ -48,7 +48,7 @@ details.faq summary::-webkit-details-marker{display:none}
 details.faq summary::after{content:'Show';color:var(--skyblue);font-weight:600;font-size:0.82rem;flex-shrink:0}
 details.faq[open] summary::after{content:'Hide'}
 details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max-width:680px}
-@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-factor-grid{grid-template-columns:1fr}}
+@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-layout>*{min-width:0}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-rail a{white-space:normal}.ga-factor-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="channel-commercial">
@@ -147,7 +147,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 
 <section id="comparison-ledger">
 <h3>Overdraft vs. Line of Credit vs. Term Loan</h3>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Dimension</th><th>Overdraft</th><th>Line of Credit</th><th>Term Loan</th></tr></thead>
 <tbody>
 <tr><td>Attachment</td><td><strong style="color:var(--navy)">On your transaction account</strong> &mdash; no separate account number</td><td>Standalone revolving facility, own account</td><td>Standalone facility, disbursed as a lump sum</td></tr>
@@ -155,11 +156,13 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Typical Use</td><td><strong style="color:var(--navy)">Recurring, short cash flow gaps</strong> &mdash; days to a few weeks at a time</td><td>Ongoing working capital, larger and longer draws</td><td>A single, planned funding need</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="rates-by-lender-type">
 <h2>Rate Benchmarks by Lender Tier (2026)</h2>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Lender Tier</th><th style="text-align:right">Rate Range (p.a.)</th></tr></thead>
 <tbody>
 <tr><td>Big 4 Banks</td><td style="text-align:right">10% &ndash; 13.5%</td></tr>
@@ -169,13 +172,14 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Private Lenders</td><td style="text-align:right">16% &ndash; 20%</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section>
 <div class="ga-worked-example">
 <h3>What a $40,000 Overdraft Actually Costs</h3>
 <p style="margin-bottom:24px">Most business owners assume an overdraft limit gets charged like a loan for the full amount, all month. It doesn't. Worked example: a $40,000 approved limit, used for an average of 12 days a month, at a typical second-tier rate of 12.5% p.a.</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div class="tf-mobile-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
 <div class="ga-lender-box"><div style="font-size:0.75rem;font-weight:600;letter-spacing:0.06em;color:var(--ink-400);margin-bottom:10px">IF CHARGED ON THE FULL LIMIT</div><div style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:14px">$416.67/mo</div><div style="font-size:0.86rem;color:var(--text-secondary);line-height:1.8">$40,000 &times; 12.5% &divide; 12<br><strong style="color:var(--navy)">This is not how it works</strong><br>Common misconception only</div></div>
 <div class="ga-lender-box hl"><div style="font-size:0.75rem;font-weight:600;letter-spacing:0.06em;color:var(--ink-400);margin-bottom:10px">ACTUAL DAILY-BALANCE COST</div><div style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:14px">$164.38/mo</div><div style="font-size:0.86rem;color:var(--text-secondary);line-height:1.8">$40,000 &times; 12.5% &divide; 365 &times; 12 days<br><strong style="color:var(--navy)">Total cost: $164.38</strong><br>Charged only on days drawn</div></div>
 </div>
@@ -201,7 +205,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <div class="ga-factor-card"><div>Existing Facilities</div><div>Other drawn facilities reduce the serviceable headroom a lender will extend.</div></div>
 <div class="ga-factor-card"><div>Credit Score</div><div>A clean file opens the bank tier; defaults or late payments narrow options to non-bank lenders.</div></div>
 </div>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Security Type</th><th>Typical Limit</th><th>Basis</th></tr></thead>
 <tbody>
 <tr><td>Unsecured</td><td>Up to $100,000</td><td>1&ndash;2 months' average account turnover</td></tr>
@@ -209,6 +214,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Property-Backed</td><td>$1M+</td><td>Loan-to-value ratio dependent</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="eligibility-and-documents">
@@ -220,7 +226,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <div class="ga-factor-card"><div>Credit File</div><div>No active defaults for bank tier; non-bank options exist otherwise.</div></div>
 <div class="ga-factor-card"><div>Business Structure</div><div>Company, trust, or sole trader; ABN active 6+ months.</div></div>
 </div>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Document</th><th>Fintech / Non-Bank</th><th>Banks</th></tr></thead>
 <tbody>
 <tr><td>Bank statements</td><td>3&ndash;6 months</td><td>6&ndash;12 months</td></tr>
@@ -229,6 +236,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Identification</td><td>Director ID + licence</td><td>Director ID + licence</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section>

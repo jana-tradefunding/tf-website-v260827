@@ -12,7 +12,7 @@
 <style>
 .hero-grid{max-width:var(--max-width-wide);margin:0 auto;padding:0 32px;display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center;align-content:center}
 .hero-eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.hero-title{font-weight:600;font-size:clamp(2.4rem,4.2vw,3.5rem);line-height:1.08;letter-spacing:-0.02em;color:var(--navy);margin-bottom:20px}
+.hero-title{font-weight:600;font-size:clamp(2.4rem,4.2vw,3.5rem);line-height:1.08;letter-spacing:var(--ls-heading);color:var(--navy);margin-bottom:20px}
 .hero-sub{font-size:1.05rem;color:var(--text-secondary);line-height:1.65;max-width:420px;margin-bottom:32px}
 
 /* Phone mockup — rebuilt in plain CSS (no external component) */
@@ -55,6 +55,10 @@
   .phone-frame{margin:0 auto}
   .compare-cols{grid-template-columns:1fr}
   .steps-grid{grid-template-columns:1fr 1fr}
+  .proof-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .proof-grid{grid-template-columns:1fr}
 }
 </style>
 </head>

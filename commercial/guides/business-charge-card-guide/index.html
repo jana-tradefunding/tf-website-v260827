@@ -48,7 +48,7 @@ details.faq summary::-webkit-details-marker{display:none}
 details.faq summary::after{content:'Show';color:var(--skyblue);font-weight:600;font-size:0.82rem;flex-shrink:0}
 details.faq[open] summary::after{content:'Hide'}
 details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max-width:680px}
-@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-factor-grid{grid-template-columns:1fr}}
+@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-layout>*{min-width:0}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-rail a{white-space:normal}.ga-factor-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="channel-commercial">
@@ -143,7 +143,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <h2>What Is a Business Charge Card, and How Is It Different From a Credit Card?</h2>
 <p style="margin-bottom:16px">A business charge card looks like a credit card &mdash; same network, same tap-and-go &mdash; but it works on a different repayment model. The full statement balance is due at the end of every billing cycle. There's no minimum-repayment option and no revolving balance to carry, so there's no interest charge sitting behind it. What you spend, you clear.</p>
 <p>That structure changes what the card is for. A credit card gives a business a financing buffer &mdash; useful when cash flow is uneven and a balance genuinely needs to be carried some months. A charge card assumes the business can always pay in full, and prices accordingly: the cost sits in a flat annual or monthly fee rather than an interest rate, and in exchange the limits tend to be higher and more flexible because the issuer isn't underwriting a revolving credit risk in the same way.</p>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Dimension</th><th>Charge Card</th><th>Credit Card</th></tr></thead>
 <tbody>
 <tr><td>Repayment Requirement</td><td>Full balance due each billing cycle</td><td>Minimum repayment; balance can revolve</td></tr>
@@ -153,12 +154,14 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Best For</td><td>Businesses that clear the balance monthly and want higher, flexible spending power</td><td>Businesses that occasionally need to carry a balance</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="fee-and-limit-benchmarks">
 <h2>Fee &amp; Limit Benchmarks by Provider Tier (2026)</h2>
 <p style="margin-bottom:24px">Charge card economics vary more by issuer type than by headline rate &mdash; there's no rate to compare, so the fee and the limit structure are what actually differentiate offers.</p>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Provider Tier</th><th>Annual Fee Range</th><th>Typical Limit Range</th><th>Rewards</th></tr></thead>
 <tbody>
 <tr><td>Bank-Issued</td><td>$0 &ndash; $450</td><td>$10,000 &ndash; $100,000</td><td>Standard points program, capped earn rate</td></tr>
@@ -166,6 +169,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Corporate Card Platforms</td><td>$0 base, per-card pricing at scale</td><td>Set per employee, aggregate limit often uncapped</td><td>Cashback on categories, expense-software bundled</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="employee-cards">
@@ -207,7 +211,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <div class="ga-factor-card"><div>Cash Flow Consistency</div><div>Issuers weigh the business's ability to clear the full balance monthly more heavily than a fixed credit score.</div></div>
 <div class="ga-factor-card"><div>Business Structure</div><div>Company or trust preferred by most issuers; sole traders accepted on a narrower panel.</div></div>
 </div>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Document</th><th>Fintech Issuer</th><th>Bank Issuer</th></tr></thead>
 <tbody>
 <tr><td>Bank statements</td><td>3&ndash;6 months</td><td>6&ndash;12 months</td></tr>
@@ -216,6 +221,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Cardholder list</td><td>Required at setup for employee cards</td><td>Required at setup for employee cards</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section>

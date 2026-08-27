@@ -48,7 +48,7 @@ details.faq summary::-webkit-details-marker{display:none}
 details.faq summary::after{content:'Show';color:var(--skyblue);font-weight:600;font-size:0.82rem;flex-shrink:0}
 details.faq[open] summary::after{content:'Hide'}
 details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max-width:680px}
-@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-factor-grid{grid-template-columns:1fr}}
+@media (max-width:900px){.ga-layout{grid-template-columns:1fr}.ga-layout>*{min-width:0}.ga-rail{position:static;border-right:none;padding-right:0;flex-direction:row;flex-wrap:wrap;border-bottom:1px solid var(--border-neutral);padding-bottom:16px}.ga-rail a{white-space:normal}.ga-factor-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="channel-commercial">
@@ -147,7 +147,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 
 <section id="comparison-ledger">
 <h3>Secured vs. Unsecured, Fixed vs. Variable</h3>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Dimension</th><th>Option A</th><th>Option B</th></tr></thead>
 <tbody>
 <tr><td>Security</td><td><strong style="color:var(--navy)">Secured</strong> &mdash; property/asset backed; lower rate, slower approval</td><td><strong style="color:var(--navy)">Unsecured</strong> &mdash; no collateral; higher rate, approved in 24&ndash;48 hrs</td></tr>
@@ -155,11 +156,13 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Term Length</td><td><strong style="color:var(--navy)">Short-term</strong> &mdash; 3&ndash;24 months; higher repayment, less total interest</td><td><strong style="color:var(--navy)">Long-term</strong> &mdash; 2&ndash;7 years; lower repayment, more total interest</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="rates-by-lender-type">
 <h2>Rate Benchmarks by Lender Tier (2026)</h2>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Lender Tier</th><th style="text-align:right">Rate Range (p.a.)</th></tr></thead>
 <tbody>
 <tr><td>Big 4 Banks</td><td style="text-align:right">7.5% &ndash; 11%</td></tr>
@@ -169,6 +172,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Private Lenders</td><td style="text-align:right">18% &ndash; 48%</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section>
@@ -201,7 +205,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <div class="ga-factor-card"><div>Existing Debt Load</div><div>Existing facilities reduce serviceable capacity for a new loan.</div></div>
 <div class="ga-factor-card"><div>Credit Score</div><div>A clean file broadens the panel; defaults or late payments narrow it to non-bank options.</div></div>
 </div>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Security Type</th><th>Typical Limit</th><th>Basis</th></tr></thead>
 <tbody>
 <tr><td>Unsecured</td><td>Up to $500,000</td><td>10&ndash;20% of annual revenue</td></tr>
@@ -209,6 +214,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Property-Backed</td><td>$5M+</td><td>Loan-to-value ratio dependent</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section id="eligibility-and-documents">
@@ -220,7 +226,8 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <div class="ga-factor-card"><div>Credit File</div><div>No active defaults for bank tier; non-bank options exist otherwise.</div></div>
 <div class="ga-factor-card"><div>Business Structure</div><div>Company, trust, or sole trader; ABN active 6+ months.</div></div>
 </div>
-<table class="ga-table">
+<div style="overflow-x:auto">
+<table class="ga-table" style="min-width:640px">
 <thead><tr><th>Document</th><th>Fintech / Non-Bank</th><th>Banks</th></tr></thead>
 <tbody>
 <tr><td>Bank statements</td><td>3&ndash;6 months</td><td>6&ndash;12 months</td></tr>
@@ -229,6 +236,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.7;max
 <tr><td>Identification</td><td>Director ID + licence</td><td>Director ID + licence</td></tr>
 </tbody>
 </table>
+</div>
 </section>
 
 <section>

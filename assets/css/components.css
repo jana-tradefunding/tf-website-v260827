@@ -77,8 +77,9 @@
   display: block;
   padding: 10px 14px;
   border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), transform var(--transition-fast);
 }
-.tf-mega-panel a:hover { background: var(--light-bg); }
+.tf-mega-panel a:hover { background: var(--light-bg); transform: translateX(2px); }
 .tf-mega-heading {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -150,7 +151,7 @@
   font-family: var(--font-heading); font-weight: 600; font-size: 0.85rem;
   color: #fff; margin-bottom: 16px; letter-spacing: 0.2px;
 }
-.tf-footer-col a { display: flex; align-items: center; min-height: 44px; padding: 4px 0; font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+.tf-footer-col a { display: flex; align-items: center; min-height: 44px; padding: 4px 0; font-size: 0.82rem; color: rgba(255,255,255,0.5); transition: color var(--transition-fast); }
 .tf-footer-col span.tf-footer-inactive { display: flex; align-items: center; min-height: 44px; padding: 4px 0; font-size: 0.82rem; color: rgba(255,255,255,0.3); cursor: default; }
 .tf-footer-col a:hover { color: #fff; }
 .tf-footer-legal { border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 0; margin-top: 32px; }
@@ -245,4 +246,6 @@
   .tf-footer-cols { grid-template-columns: 1fr 1fr; }
   .lender-strip { grid-template-columns: repeat(2,1fr); }
   .process-grid { grid-template-columns: 1fr; }
+  .tf-pathways-grid { grid-template-columns: 1fr !important; }
+  .tf-mobile-grid { grid-template-columns: 1fr !important; }
 }
