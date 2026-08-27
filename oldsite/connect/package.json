@@ -1,0 +1,17 @@
+{
+  "name": "vendor-landing",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.2"
+  },
+  "scripts": {
+    "build:includes": "node scripts/build-includes.mjs",
+    "build:includes:check": "node scripts/build-includes.mjs --check",
+    "prepare": "cd .. && git config core.hooksPath .githooks"
+  }
+}
