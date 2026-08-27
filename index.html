@@ -56,6 +56,29 @@ button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;
 
 .footer-link{font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);transition:color 0.2s;}
 .footer-link:hover{color:#FFFFFF;}
+
+/* Mobile nav */
+.mobile-menu-btn{display:none;}
+.mobile-menu-panel{display:none;}
+@media (max-width:860px){
+  header nav[aria-label="Primary"]{display:none !important;}
+  header > div{padding-left:24px;padding-right:24px;gap:12px;}
+  .mobile-menu-btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex-shrink:0;cursor:pointer;background:none;border:none;padding:0;}
+  .mobile-menu-btn .burger{position:relative;display:block;width:20px;height:2px;background:#001C44;transition:background 0.18s ease;}
+  .mobile-menu-btn .burger::before,.mobile-menu-btn .burger::after{content:'';position:absolute;left:0;width:20px;height:2px;background:#001C44;transition:transform 0.18s ease,top 0.18s ease;}
+  .mobile-menu-btn .burger::before{top:-6px;}
+  .mobile-menu-btn .burger::after{top:6px;}
+  .mobile-menu-btn[aria-expanded="true"] .burger{background:transparent;}
+  .mobile-menu-btn[aria-expanded="true"] .burger::before{top:0;transform:rotate(45deg);}
+  .mobile-menu-btn[aria-expanded="true"] .burger::after{top:0;transform:rotate(-45deg);}
+  .mobile-menu-panel{display:none;flex-direction:column;background:#FFFFFF;border-top:1px solid rgba(0,28,68,0.08);padding:4px 24px 20px;}
+  .mobile-menu-panel.is-open{display:flex;}
+  .mobile-menu-panel a{display:block;padding:14px 0;font-family:'DM Sans',sans-serif;font-weight:500;font-size:15px;color:rgba(0,28,68,0.85);border-bottom:1px solid rgba(0,28,68,0.06);}
+  .mobile-menu-panel a:last-child{border-bottom:none;}
+  .mobile-menu-panel .mobile-menu-group-label{display:block;padding-top:16px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(0,28,68,0.4);}
+  .tf-mobile-grid{grid-template-columns:1fr !important;}
+  .channel-card{aspect-ratio:auto !important;}
+}
 </style>
 </head>
 <body>
@@ -110,6 +133,17 @@ button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;
     </nav>
 
     <a href="home-shared/contact/index.html" class="cta-btn">Contact</a>
+
+    <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenuPanel"><span class="burger"></span></button>
+  </div>
+  <div class="mobile-menu-panel" id="mobileMenuPanel">
+    <span class="mobile-menu-group-label">Products</span>
+    <a href="commercial/index.html">Fund my business</a>
+    <a href="connect/index.html">Support client payments</a>
+    <a href="personal-and-property/index.html">Funding owners running business</a>
+    <span class="mobile-menu-group-label">Compare</span>
+    <a href="commercial/compare-report/index.html">Which Option is Best</a>
+    <a href="home-shared/about/index.html">About</a>
   </div>
 </header>
 
@@ -123,7 +157,7 @@ button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;
 </section>
 
 <section aria-label="Funding channels" style="padding:clamp(96px,8vw,128px) 40px;background:#F8FAFC;">
-  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+  <div class="tf-mobile-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
 
     <a href="commercial/index.html" class="channel-card">
       <span class="channel-eyebrow">Commercial</span>
@@ -150,7 +184,7 @@ button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;
 </section>
 
 <section style="background:#FFFFFF;padding:clamp(96px,8vw,128px) 40px;">
-  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:stretch;">
+  <div class="tf-mobile-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:stretch;">
     <div style="text-align:left;">
       <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.14em;color:rgba(0,28,68,0.45);margin-bottom:20px;">Why we exist</div>
       <p style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:clamp(1.2rem,1.7vw,1.5rem);line-height:1.6;color:#001C44;margin:0;">Could you review over 100 products to pick which ones you qualify for and are best?</p>
@@ -172,7 +206,7 @@ button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;
 </section>
 
 <footer style="background:#001C44;">
-  <div style="max-width:1200px;margin:0 auto;padding:72px 40px 40px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;">
+  <div class="tf-mobile-grid" style="max-width:1200px;margin:0 auto;padding:72px 40px 40px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;">
 
     <div>
       <img src="assets/img/logo-white.png" alt="tradefunding" style="height:20px;width:auto;display:block;margin-bottom:16px;">
@@ -229,6 +263,18 @@ button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;
 </footer>
 
 </div>
+
+<script>
+(function(){
+  var btn=document.getElementById('mobileMenuBtn');
+  var panel=document.getElementById('mobileMenuPanel');
+  if(!btn||!panel)return;
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded',String(open));
+  });
+})();
+</script>
 
 </body>
 </html>

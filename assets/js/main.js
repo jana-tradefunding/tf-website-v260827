@@ -229,15 +229,49 @@ document.addEventListener('DOMContentLoaded', function () {
     card.addEventListener('blur', function () { detail.classList.remove('is-visible'); });
   });
 
-  // --- Mobile nav toggle (subpages) ---
-  var mobileToggle = document.querySelector('[data-mobile-nav-toggle]');
-  var mobileNav = document.querySelector('[data-mobile-nav]');
-  if (mobileToggle && mobileNav) {
-    mobileToggle.addEventListener('click', function () {
-      var isOpen = mobileNav.classList.toggle('is-open');
-      mobileToggle.setAttribute('aria-expanded', String(isOpen));
+  // --- Mobile nav (subpages): inject the hamburger button, wire it up,
+  // and let a tap on "Products"/"Compare" expand their mega panel inline
+  // (the panels only open on hover otherwise, which touch devices don't have). ---
+  document.querySelectorAll('.tf-nav').forEach(function (navEl) {
+    var inner = navEl.querySelector('.tf-nav-inner');
+    var links = navEl.querySelector('.tf-nav-links');
+    if (!inner || !links) return;
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'tf-nav-toggle-btn';
+    btn.setAttribute('aria-label', 'Menu');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="tf-burger"></span>';
+    inner.appendChild(btn);
+
+    btn.addEventListener('click', function () {
+      var isOpen = navEl.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(isOpen));
     });
-  }
+
+    navEl.querySelectorAll('.tf-nav-item').forEach(function (item) {
+      var trigger = item.querySelector('.tf-nav-link');
+      var panel = item.querySelector('.tf-mega-panel, .tf-mega-panel-compare');
+      if (!trigger || !panel) return;
+      trigger.addEventListener('click', function (e) {
+        if (window.innerWidth > 900) return;
+        e.preventDefault();
+        var wasOpen = item.classList.contains('is-open');
+        navEl.querySelectorAll('.tf-nav-item.is-open').forEach(function (i) {
+          if (i !== item) i.classList.remove('is-open');
+        });
+        item.classList.toggle('is-open', !wasOpen);
+      });
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 900 && navEl.classList.contains('is-open')) {
+        navEl.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
 
   // --- Personal & Property: sample-rate table swaps with loan-type pill ---
   var sampleData = {
