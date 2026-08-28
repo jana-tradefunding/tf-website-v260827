@@ -89,7 +89,12 @@
 }
 .tf-mega-sub { font-size: 0.78rem; color: var(--text-secondary); }
 
-/* --- MEGA PANEL: full-width variant (Products) --- */
+/* --- MEGA PANEL: full-width variant (Products) ---
+   Frosted white surface (per Carta "plain surface" direction) rather than a
+   solid dark fill. Text colors below are chosen to hold WCAG AA contrast
+   (4.5:1+ for body text) against that white, on the assumption — true
+   everywhere on this site per brand spec — that whatever sits behind the
+   panel is itself a light/white hero, never a photo or dark section. */
 .tf-mega-panel.tf-mega-panel-wide {
   position: fixed;
   top: var(--nav-h, 80px);
@@ -100,11 +105,16 @@
   max-height: none;
   padding: 40px 0 28px;
   border: none;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid var(--border);
   border-radius: 0;
-  background: var(--navy);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
   box-shadow: var(--shadow-lg);
   transform: translateY(-6px);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .tf-mega-panel.tf-mega-panel-wide { background: rgba(255,255,255,0.96); }
 }
 .tf-nav-item:hover .tf-mega-panel.tf-mega-panel-wide,
 .tf-nav-item:focus-within .tf-mega-panel.tf-mega-panel-wide {
@@ -122,10 +132,10 @@
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--white);
+  color: var(--navy);
   margin-bottom: 28px;
   padding: 0 0 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
   border-radius: 0;
   width: 100%;
 }
@@ -145,10 +155,10 @@
   font-size: 0.68rem;
   letter-spacing: var(--ls-label);
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: var(--text-secondary);
   margin-bottom: 12px;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
 }
 .tf-mega-wide-links { display: flex; flex-direction: column; gap: 2px; }
 .tf-mega-panel-wide .tf-mega-wide-link {
@@ -158,7 +168,7 @@
   font-family: var(--font-heading);
   font-weight: 500;
   font-size: 0.86rem;
-  color: rgba(255,255,255,0.82);
+  color: rgba(0,28,68,0.72);
   padding: 7px 0;
   border-radius: 0;
   transition: color var(--transition-fast);
@@ -168,15 +178,17 @@
   transform: translateX(-4px);
   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
-.tf-mega-panel-wide .tf-mega-wide-link:hover { color: var(--white); background: none; transform: none; }
+.tf-mega-panel-wide .tf-mega-wide-link:hover { color: var(--navy); background: none; transform: none; }
 .tf-mega-wide-link:hover .tf-mega-arrow { opacity: 1; transform: translateX(0); }
 .tf-mega-wide-foot {
   margin-top: 32px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid var(--border);
 }
-.tf-mega-wide-foot .tf-mega-wide-link { color: var(--channel-accent); font-weight: 600; }
-.tf-mega-wide-foot .tf-mega-wide-link:hover { color: var(--white); }
+/* Channel accents (skyblue/gold/peach) don't meet WCAG contrast as text on
+   white, so the foot CTA stays navy and leans on weight for emphasis. */
+.tf-mega-wide-foot .tf-mega-wide-link { color: var(--navy); font-weight: 700; }
+.tf-mega-wide-foot .tf-mega-wide-link:hover { color: var(--navy); }
 
 .tf-mega-wide-grid.tf-mega-wide-grid-compact {
   grid-template-columns: repeat(2, minmax(200px, 240px));
@@ -195,10 +207,10 @@
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.86rem;
-  color: rgba(255,255,255,0.9);
+  color: var(--navy);
   margin-bottom: 2px;
 }
-.tf-mega-wide-static-sub { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+.tf-mega-wide-static-sub { font-size: 0.78rem; color: var(--text-secondary); }
 
 @media (max-width: 1080px) {
   .tf-mega-wide-grid { grid-template-columns: repeat(3, 1fr); }
