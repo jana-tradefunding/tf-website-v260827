@@ -25,8 +25,27 @@
 .day-pill{flex:1;text-align:center;padding:9px 0;border-radius:8px;background:#fff;border:1px solid var(--border);color:var(--navy);font-family:var(--font-heading);font-weight:600;font-size:0.78rem}
 .day-pill.is-active{background:var(--peach);color:#fff;border-color:var(--peach)}
 .time-slot{text-align:center;padding:9px 0;border-radius:8px;background:#fff;border:1px solid var(--border);color:var(--navy);font-family:var(--font-heading);font-weight:500;font-size:0.76rem}
+.pp-calc-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-soft);max-width:560px;margin:0 auto}
+.pp-calc-row{margin-bottom:22px}
+.pp-calc-label{display:flex;align-items:center;justify-content:space-between;font-weight:500;font-size:0.85rem;color:var(--text-secondary);margin-bottom:10px}
+.pp-calc-label span:last-child{font-weight:600;color:var(--navy)}
+.pp-calc-row input[type="range"]{-webkit-appearance:none;width:100%;height:4px;border-radius:2px;background:var(--border);outline:none}
+.pp-calc-row input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--peach);cursor:pointer;border:3px solid #fff;box-shadow:0 0 0 1px var(--border)}
+.pp-calc-row input[type="range"]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--peach);cursor:pointer;border:3px solid #fff}
+.pp-calc-toggle{display:flex;gap:8px}
+.pp-calc-toggle-btn{flex:1;padding:10px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--text-secondary);font-family:var(--font-heading);font-weight:600;font-size:0.82rem;cursor:pointer}
+.pp-calc-toggle-btn.is-active{background:var(--tint-peach-10);color:var(--peach);border-color:var(--peach)}
+.pp-calc-out{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:26px;border-radius:var(--radius-md);overflow:hidden}
+.pp-calc-out-cell{background:var(--bg-soft);padding:18px 20px}
+.pp-calc-out-cell:first-child{background:var(--navy)}
+.pp-calc-out-cell:first-child .pp-calc-out-label{color:rgba(255,255,255,0.6)}
+.pp-calc-out-cell:first-child .pp-calc-out-value{color:#fff}
+.pp-calc-out-label{font-weight:500;font-size:0.78rem;color:var(--text-secondary);margin-bottom:6px}
+.pp-calc-out-value{font-weight:700;font-size:1.4rem;color:var(--navy)}
+.pp-calc-note{font-size:0.78rem;color:var(--text-secondary);margin-top:18px;line-height:1.6}
 @media (max-width:900px){
   .crosslink-grid{grid-template-columns:1fr 1fr}
+  .pp-calc-out{grid-template-columns:1fr!important}
 }
 </style>
 </head>
@@ -39,24 +58,61 @@
 <div class="tf-nav-links">
 <div class="tf-nav-item">
 <span class="tf-nav-link is-active" aria-current="page">Products<span class="tf-caret" aria-hidden="true"></span></span>
-<div class="tf-mega-panel" style="width:340px;max-height:80vh;overflow-y:auto">
-<span style="display:block;padding:2px 14px 12px;margin-bottom:6px;border-bottom:1px solid var(--border);font-family:var(--font-heading);font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-400)">Funding Owners Running Business</span>
-<a href="../home-loans/index.html"><span class="tf-mega-heading">Home Loans</span><div class="tf-mega-sub">First home, next home, or refinance.</div></a>
-<a href="../investment-property/index.html"><span class="tf-mega-heading">Investment Property</span><div class="tf-mega-sub">Buy, refinance, or restructure your portfolio.</div></a>
-<a href="../commercial-property/index.html"><span class="tf-mega-heading">Commercial Property</span><div class="tf-mega-sub">Fund the premises your business runs from.</div></a>
-<a href="../construction/index.html"><span class="tf-mega-heading">Construction</span><div class="tf-mega-sub">New builds, staged progress payments, handled.</div></a>
-<a href="../smsf-property/index.html"><span class="tf-mega-heading">SMSF Property</span><div class="tf-mega-sub">Property finance inside your SMSF, done right.</div></a>
-<a href="../personal-loans/index.html"><span class="tf-mega-heading">Personal Loans</span><div class="tf-mega-sub">Secured or unsecured, bank or specialist.</div></a>
-<a href="../debt-consolidation/index.html"><span class="tf-mega-heading">Debt Consolidation</span><div class="tf-mega-sub">One clear structure, instead of several.</div></a>
-<a href="../refinancing/index.html"><span class="tf-mega-heading">Refinancing</span><div class="tf-mega-sub">See what a better deal actually looks like.</div></a>
-<a href="../self-employed-home-loans/index.html"><span class="tf-mega-heading">Self-Employed Home Loans</span><div class="tf-mega-sub">A home loan built around self-employed income, without the paperwork a standard bank loan demands.</div></a>
-<a href="index.html" style="color:var(--peach)"><span class="tf-mega-heading">Second Mortgage</span><div class="tf-mega-sub">Access equity in property you already own without refinancing or disturbing your first mortgage.</div></a>
+<div class="tf-mega-panel tf-mega-panel-wide">
+<div class="tf-mega-wide-inner">
+<a href="../index.html" class="tf-mega-wide-lead">All Personal &amp; Property options<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<div class="tf-mega-wide-grid tf-mega-wide-grid-3">
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Home Loans</span>
+<div class="tf-mega-wide-links">
+<a href="../home-loans/index.html" class="tf-mega-wide-link">Home Loans<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../refinancing/index.html" class="tf-mega-wide-link">Refinancing<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../self-employed-home-loans/index.html" class="tf-mega-wide-link">Self-Employed Home Loans<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Property Investment</span>
+<div class="tf-mega-wide-links">
+<a href="../investment-property/index.html" class="tf-mega-wide-link">Investment Property<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../commercial-property/index.html" class="tf-mega-wide-link">Commercial Property<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../construction/index.html" class="tf-mega-wide-link">Construction<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../smsf-property/index.html" class="tf-mega-wide-link">SMSF Property<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Personal Finance</span>
+<div class="tf-mega-wide-links">
+<a href="../personal-loans/index.html" class="tf-mega-wide-link">Personal Loans<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../debt-consolidation/index.html" class="tf-mega-wide-link">Debt Consolidation<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../second-mortgage/index.html" class="tf-mega-wide-link">Second Mortgage<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="tf-nav-item">
 <span class="tf-nav-link">Compare<span class="tf-caret" aria-hidden="true"></span></span>
-<div class="tf-mega-panel" style="min-width:240px">
-<a href="../../commercial/compare-report/index.html"><span class="tf-mega-heading">Which Option is Best</span><div class="tf-mega-sub">See how our matching engine ranks 70+ lenders.</div></a>
+<div class="tf-mega-panel tf-mega-panel-wide">
+<div class="tf-mega-wide-inner">
+<a href="../../commercial/compare-report/index.html" class="tf-mega-wide-lead">Compare your options<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<div class="tf-mega-wide-grid tf-mega-wide-grid-compact">
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Compare</span>
+<div class="tf-mega-wide-links">
+<a href="../../commercial/compare-report/index.html" class="tf-mega-wide-link">Compare Report<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../../commercial/meet-cashper/index.html" class="tf-mega-wide-link">Meet Cashper<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Calculators</span>
+<div class="tf-mega-wide-links">
+<a href="../../commercial/repayment-calculator/index.html" class="tf-mega-wide-link">Repayment Calculator<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../../commercial/equipment-calculator/index.html" class="tf-mega-wide-link">Equipment Finance Calculator<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <a href="../../home-shared/about/index.html" class="tf-nav-link">About</a>
@@ -190,6 +246,49 @@
 </div>
 </section>
 
+<!-- CALCULATOR -->
+<section style="background:#fff;padding:var(--section-y-sm) 0">
+<div class="container" style="max-width:var(--max-width-prose);margin:0 auto">
+<div style="text-align:center;margin-bottom:36px">
+<span style="display:inline-flex;align-items:center;gap:10px;justify-content:center" class="eyebrow"><span style="width:7px;height:7px;border-radius:50%;background:var(--peach)"></span>Repayment Calculator</span>
+<h2 class="section-title" style="margin:14px 0 0">Estimate your repayments.</h2>
+</div>
+<div class="pp-calc-card">
+<div class="pp-calc-row">
+<div class="pp-calc-toggle">
+<button type="button" class="pp-calc-toggle-btn is-active" data-repay="pi">Principal &amp; Interest</button>
+<button type="button" class="pp-calc-toggle-btn" data-repay="io">Interest Only</button>
+</div>
+</div>
+<div class="pp-calc-row">
+<div class="pp-calc-label"><span>Loan amount</span><span id="sm-amount-display">$500,000</span></div>
+<input type="range" id="sm-amount-slider" min="50000" max="5000000" step="50000" value="500000">
+</div>
+<div class="pp-calc-row" style="margin-bottom:0">
+<div class="pp-calc-label"><span>Loan term</span></div>
+<select id="sm-term-select" class="field" style="margin-bottom:0">
+<option value="12">1 year</option>
+<option value="24">2 years</option>
+<option value="36">3 years</option>
+<option value="60">5 years</option>
+<option value="84">7 years</option>
+<option value="120">10 years</option>
+<option value="180" selected>15 years</option>
+<option value="240">20 years</option>
+<option value="300">25 years</option>
+<option value="360">30 years</option>
+</select>
+</div>
+<div class="pp-calc-out">
+<div class="pp-calc-out-cell"><div class="pp-calc-out-label" id="sm-result-label">Monthly repayment (P&amp;I)</div><div class="pp-calc-out-value" id="sm-monthly">$6,002/mo</div></div>
+<div class="pp-calc-out-cell"><div class="pp-calc-out-label">Total repaid</div><div class="pp-calc-out-value" id="sm-total">$1,080,360</div></div>
+<div class="pp-calc-out-cell"><div class="pp-calc-out-label">Total interest</div><div class="pp-calc-out-value" id="sm-interest">$580,360</div></div>
+</div>
+<p class="pp-calc-note">Illustrative only, based on a 12% p.a. indicative rate for a specialist second mortgage. Your Compare Report shows the exact rate and term each lender offers, based on your equity position and exit strategy.</p>
+</div>
+</div>
+</section>
+
 <!-- JAMES LOWE MINI CARD -->
 <section style="background:#fff;padding:var(--section-y-sm) 0">
 <div class="container">
@@ -270,6 +369,64 @@ document.querySelector('[data-enquiry-form]').addEventListener('submit', functio
   e.preventDefault();
   alert('This form is a design preview. Connect it to Zoho CRM before go-live.');
 });
+
+(function(){
+  var RATE = 12; // indicative p.a. rate for a specialist second mortgage
+  var slider = document.getElementById('sm-amount-slider');
+  var termSelect = document.getElementById('sm-term-select');
+  var toggleBtns = document.querySelectorAll('.pp-calc-toggle-btn');
+  var resultLabel = document.getElementById('sm-result-label');
+  var monthlyEl = document.getElementById('sm-monthly');
+  var totalEl = document.getElementById('sm-total');
+  var interestEl = document.getElementById('sm-interest');
+  var amountDisplay = document.getElementById('sm-amount-display');
+  if (!slider) return;
+
+  var mode = 'pi';
+
+  function fmt(n){ return '$' + Math.round(n).toLocaleString('en-AU'); }
+
+  function updateSliderFill(){
+    var pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+    slider.style.background = 'linear-gradient(90deg, #FF5D5C ' + pct + '%, #e2e8f0 ' + pct + '%)';
+  }
+
+  function render(){
+    var P = Number(slider.value);
+    var months = Number(termSelect.value);
+    var r = RATE / 100 / 12;
+
+    amountDisplay.textContent = fmt(P);
+    updateSliderFill();
+
+    if (mode === 'io') {
+      var monthlyInterest = P * r;
+      monthlyEl.textContent = fmt(monthlyInterest) + '/mo';
+      totalEl.textContent = fmt(monthlyInterest * months + P);
+      interestEl.textContent = fmt(monthlyInterest * months);
+      resultLabel.textContent = 'Monthly repayment (Interest Only)';
+    } else {
+      var M = r === 0 ? P / months : P * (r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1);
+      monthlyEl.textContent = fmt(M) + '/mo';
+      totalEl.textContent = fmt(M * months);
+      interestEl.textContent = fmt(M * months - P);
+      resultLabel.textContent = 'Monthly repayment (P&I)';
+    }
+  }
+
+  slider.addEventListener('input', render);
+  termSelect.addEventListener('change', render);
+  toggleBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      mode = btn.getAttribute('data-repay');
+      toggleBtns.forEach(function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      render();
+    });
+  });
+
+  render();
+})();
 </script>
 </body>
 </html>

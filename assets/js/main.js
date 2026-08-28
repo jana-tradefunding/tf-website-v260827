@@ -237,6 +237,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var links = navEl.querySelector('.tf-nav-links');
     if (!inner || !links) return;
 
+    // Full-bleed mega panels (.tf-mega-panel-wide) are position:fixed and need
+    // the nav's real rendered height, which varies with content/breakpoint.
+    var setNavHeight = function () {
+      document.documentElement.style.setProperty('--nav-h', navEl.offsetHeight + 'px');
+    };
+    setNavHeight();
+    window.addEventListener('resize', setNavHeight);
+
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'tf-nav-toggle-btn';

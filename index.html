@@ -13,24 +13,35 @@ a{text-decoration:none;color:inherit;}
 button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;}
 *{box-sizing:border-box;}
 
-/* Mega menu (CSS hover, replacing the dc-runtime state) */
+/* Mega menu — full-bleed dark panel, arrow-reveal links */
 .nav-item{position:relative;}
-.mega-panel{
-  position:absolute;top:64px;left:50%;transform:translateX(-50%);width:400px;background:#FFFFFF;
-  border:1px solid rgba(0,28,68,0.08);border-radius:16px;box-shadow:0 20px 60px rgba(0,28,68,0.16);
-  padding:10px;display:flex;flex-direction:column;gap:2px;
-  opacity:0;visibility:hidden;transform:translate(-50%,-6px);
+.mega-panel,.mega-panel-compare{
+  position:fixed;top:80px;left:0;width:100vw;max-width:100vw;
+  background:#001C44;border:none;border-top:1px solid rgba(255,255,255,0.08);border-radius:0;
+  box-shadow:0 20px 60px rgba(0,28,68,0.24);
+  padding:40px 0 28px;
+  opacity:0;visibility:hidden;transform:translateY(-6px);
   transition:opacity 0.2s ease,transform 0.2s ease,visibility 0.2s ease;
 }
-.nav-item:hover .mega-panel,.nav-item:focus-within .mega-panel{opacity:1;visibility:visible;transform:translate(-50%,0);}
-.mega-panel a{display:flex;align-items:flex-start;gap:14px;padding:14px 14px;border-radius:12px;transition:background 0.2s;}
-.mega-panel a:hover{background:rgba(0,28,68,0.045);}
-.mega-panel-compare{
-  position:absolute;top:64px;left:50%;transform:translateX(-50%);background:#001C44;border-radius:10px;
-  box-shadow:0 20px 60px rgba(0,28,68,0.24);padding:10px 16px;white-space:nowrap;
-  opacity:0;visibility:hidden;transition:opacity 0.2s ease,visibility 0.2s ease;
+.nav-item:hover .mega-panel,.nav-item:focus-within .mega-panel,
+.nav-item:hover .mega-panel-compare,.nav-item:focus-within .mega-panel-compare{opacity:1;visibility:visible;transform:translateY(0);}
+.mega-wide-inner{max-width:1200px;margin:0 auto;padding:0 32px;}
+.mega-wide-lead{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.05rem;color:#FFFFFF;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.1);width:100%;}
+.mega-wide-lead .mega-arrow{transition:transform 0.2s ease;}
+.mega-wide-lead:hover .mega-arrow{transform:translateX(4px);}
+.mega-wide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.mega-wide-grid.mega-wide-grid-compact{grid-template-columns:repeat(2,minmax(200px,240px));justify-content:start;}
+.mega-wide-group-label{display:block;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.mega-wide-links{display:flex;flex-direction:column;gap:2px;}
+.mega-wide-link{display:inline-flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.9rem;color:rgba(255,255,255,0.82);padding:7px 0;transition:color 0.2s ease;}
+.mega-wide-link .mega-arrow{opacity:0;transform:translateX(-4px);transition:opacity 0.2s ease,transform 0.2s ease;}
+.mega-wide-link:hover{color:#FFFFFF;}
+.mega-wide-link:hover .mega-arrow{opacity:1;transform:translateX(0);}
+.mega-wide-sub{font-family:'DM Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.5);margin-top:2px;}
+@media (max-width:900px){
+  .mega-wide-grid,.mega-wide-grid.mega-wide-grid-compact{grid-template-columns:1fr;gap:24px;}
+  .mega-wide-inner{padding:0 20px;}
 }
-.nav-item:hover .mega-panel-compare,.nav-item:focus-within .mega-panel-compare{opacity:1;visibility:visible;}
 
 /* Channel tiles — benefit-led hierarchy, no colour coding */
 .channel-card{
@@ -97,24 +108,22 @@ button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;
           <span aria-hidden="true" style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;"></span>
         </span>
         <div role="menu" class="mega-panel">
-          <a href="commercial/index.html">
-            <div>
-              <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.02em;color:#001C44;">FUND MY BUSINESS</div>
-              <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(0,28,68,0.55);margin-top:2px;">Compare options below</div>
+          <div class="mega-wide-inner">
+            <div class="mega-wide-grid">
+              <div>
+                <a href="commercial/index.html" class="mega-wide-link" style="font-weight:700;font-size:1rem;">Fund my business<span class="mega-arrow" aria-hidden="true">&rarr;</span></a>
+                <div class="mega-wide-sub">Compare 70+ lenders for term loans, credit lines and asset finance.</div>
+              </div>
+              <div>
+                <a href="connect/index.html" class="mega-wide-link" style="font-weight:700;font-size:1rem;">Support client payments<span class="mega-arrow" aria-hidden="true">&rarr;</span></a>
+                <div class="mega-wide-sub">The funding market at your point of sale.</div>
+              </div>
+              <div>
+                <a href="personal-and-property/index.html" class="mega-wide-link" style="font-weight:700;font-size:1rem;">Personal &amp; property<span class="mega-arrow" aria-hidden="true">&rarr;</span></a>
+                <div class="mega-wide-sub">Funding for owners running a business, and the property behind it.</div>
+              </div>
             </div>
-          </a>
-          <a href="connect/index.html">
-            <div>
-              <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.02em;color:#001C44;">SUPPORT CLIENT PAYMENTS</div>
-              <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(0,28,68,0.55);margin-top:2px;">The funding market at point-of-sale</div>
-            </div>
-          </a>
-          <a href="personal-and-property/index.html">
-            <div>
-              <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.02em;color:#001C44;">FUNDING OWNERS RUNNING BUSINESS</div>
-              <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(0,28,68,0.55);margin-top:2px;">For their personal and property needs</div>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
 
@@ -125,7 +134,25 @@ button{font-family:inherit;border:none;background:none;padding:0;cursor:pointer;
           <span aria-hidden="true" style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;"></span>
         </a>
         <div role="menu" class="mega-panel-compare">
-          <span style="font-family:'DM Sans',sans-serif;font-weight:500;font-size:13.5px;color:#FFFFFF;">Which Option is Best</span>
+          <div class="mega-wide-inner">
+            <a href="commercial/compare-report/index.html" class="mega-wide-lead">Compare your options<span class="mega-arrow" aria-hidden="true">&rarr;</span></a>
+            <div class="mega-wide-grid mega-wide-grid-compact">
+              <div>
+                <span class="mega-wide-group-label">Compare</span>
+                <div class="mega-wide-links">
+                  <a href="commercial/compare-report/index.html" class="mega-wide-link">Compare Report<span class="mega-arrow" aria-hidden="true">&rarr;</span></a>
+                  <a href="commercial/meet-cashper/index.html" class="mega-wide-link">Meet Cashper<span class="mega-arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+              <div>
+                <span class="mega-wide-group-label">Calculators</span>
+                <div class="mega-wide-links">
+                  <a href="commercial/repayment-calculator/index.html" class="mega-wide-link">Repayment Calculator<span class="mega-arrow" aria-hidden="true">&rarr;</span></a>
+                  <a href="commercial/equipment-calculator/index.html" class="mega-wide-link">Equipment Finance Calculator<span class="mega-arrow" aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

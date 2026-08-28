@@ -40,7 +40,7 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.65;ma
 .cp-calc-row input[type="range"]{-webkit-appearance:none;width:100%;height:4px;border-radius:2px;background:var(--border-neutral);outline:none}
 .cp-calc-row input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--navy);cursor:pointer;border:3px solid #fff;box-shadow:0 0 0 1px var(--border-neutral)}
 .cp-calc-row input[type="range"]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--navy);cursor:pointer;border:3px solid #fff}
-.cp-calc-out{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-neutral);border:1px solid var(--border-neutral);margin-top:26px}
+.cp-calc-out{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-neutral);border:1px solid var(--border-neutral);margin-top:26px}
 .cp-calc-out-cell{background:var(--bg-soft);padding:18px 20px}
 .cp-calc-out-cell:first-child{background:var(--navy)}
 .cp-calc-out-cell:first-child .cp-calc-out-label{color:rgba(255,255,255,0.6)}
@@ -67,33 +67,105 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.65;ma
 <div class="tf-nav-links">
 <div class="tf-nav-item">
 <span class="tf-nav-link is-active" aria-current="page">Products<span class="tf-caret" aria-hidden="true"></span></span>
-<div class="tf-mega-panel" style="width:400px;max-height:80vh;overflow-y:auto">
-<span style="display:block;padding:2px 14px 12px;margin-bottom:6px;border-bottom:1px solid var(--border);font-family:var(--font-heading);font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-400)">Fund My Business</span>
-<a href="../business-term-loans/index.html"><span class="tf-mega-heading">Business Term Loans</span><div class="tf-mega-sub">A lump sum with fixed repayments for growth or working capital.</div></a>
-<a href="../merchant-cash-advance/index.html"><span class="tf-mega-heading">Merchant Cash Advance</span><div class="tf-mega-sub">An advance repaid as a percentage of card sales.</div></a>
-<a href="../r-and-d-funding/index.html"><span class="tf-mega-heading">R&amp;D Tax Incentive Funding</span><div class="tf-mega-sub">Access your R&amp;D Tax Incentive claim before the ATO pays out.</div></a>
-<a href="index.html"><span class="tf-mega-heading">Business Charge Card</span><div class="tf-mega-sub">Team spending power on a card built for business expenses.</div></a>
-<a href="../business-line-of-credit/index.html"><span class="tf-mega-heading">Business Line of Credit</span><div class="tf-mega-sub">Draw funds as needed, pay interest only on what you use.</div></a>
-<a href="../overdraft/index.html"><span class="tf-mega-heading">Business Overdraft</span><div class="tf-mega-sub">A flexible buffer on your everyday transaction account.</div></a>
-<a href="../invoice-finance/index.html"><span class="tf-mega-heading">Invoice Finance</span><div class="tf-mega-sub">Unlock cash tied up in unpaid invoices in days, not months.</div></a>
-<a href="../fund-an-invoice/index.html"><span class="tf-mega-heading">Fund an Invoice</span><div class="tf-mega-sub">Fund a single invoice without a full ongoing facility.</div></a>
-<a href="../trade-finance/index.html"><span class="tf-mega-heading">Trade Finance</span><div class="tf-mega-sub">Fund the gap between paying suppliers and getting paid.</div></a>
-<a href="../export-finance/index.html"><span class="tf-mega-heading">Export Finance</span><div class="tf-mega-sub">Fund production and shipping before your buyer pays.</div></a>
-<a href="../supply-chain-funding/index.html"><span class="tf-mega-heading">Supply Chain Funding</span><div class="tf-mega-sub">Extend payment terms, or get suppliers paid early.</div></a>
-<a href="../finance-lease/index.html"><span class="tf-mega-heading">Finance Lease</span><div class="tf-mega-sub">Lease equipment with the option to own it at the end.</div></a>
-<a href="../operating-lease/index.html"><span class="tf-mega-heading">Operating Lease</span><div class="tf-mega-sub">Use equipment without owning it, off your balance sheet.</div></a>
-<a href="../chattel-mortgage/index.html"><span class="tf-mega-heading">Chattel Mortgage</span><div class="tf-mega-sub">Own equipment from day one while spreading the cost.</div></a>
-<a href="../../personal-and-property/second-mortgage/index.html"><span class="tf-mega-heading">Second Mortgage</span><div class="tf-mega-sub">Access equity in property you own without refinancing.</div></a>
-<a href="../../personal-and-property/self-employed-home-loans/index.html"><span class="tf-mega-heading">Self-Employed Home Loan</span><div class="tf-mega-sub">A home loan built around self-employed income.</div></a>
-<div style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px">
-<a href="../products/index.html"><span class="tf-mega-heading" style="color:var(--skyblue)">View all products &rarr;</span></a>
+<div class="tf-mega-panel tf-mega-panel-wide">
+<div class="tf-mega-wide-inner">
+<a href="../products/index.html" class="tf-mega-wide-lead">All business loans<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<div class="tf-mega-wide-grid">
+<div class="tf-mega-wide-col">
+<div>
+<span class="tf-mega-wide-group-label">Term Loans</span>
+<div class="tf-mega-wide-links">
+<a href="../business-term-loans/index.html" class="tf-mega-wide-link">Term Loan<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../merchant-cash-advance/index.html" class="tf-mega-wide-link">Merchant Cash Advance<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../r-and-d-funding/index.html" class="tf-mega-wide-link">R&amp;D Funding<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+<div>
+<span class="tf-mega-wide-group-label">Other</span>
+<div class="tf-mega-wide-links">
+<a href="../products/index.html" class="tf-mega-wide-link">View all business loans<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+</div>
+<div class="tf-mega-wide-col">
+<div>
+<span class="tf-mega-wide-group-label">Credit Lines</span>
+<div class="tf-mega-wide-links">
+<a href="../charge-card/index.html" class="tf-mega-wide-link">Charge Card<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../business-line-of-credit/index.html" class="tf-mega-wide-link">Line of Credit<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../overdraft/index.html" class="tf-mega-wide-link">Overdraft<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+<div>
+<span class="tf-mega-wide-group-label">Company</span>
+<div class="tf-mega-wide-links">
+<a href="../guides/index.html" class="tf-mega-wide-link">Guides &amp; Resources<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../../home-shared/about/index.html" class="tf-mega-wide-link">About Us<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+</div>
+<div class="tf-mega-wide-col">
+<div>
+<span class="tf-mega-wide-group-label">Invoice</span>
+<div class="tf-mega-wide-links">
+<a href="../invoice-finance/index.html" class="tf-mega-wide-link">Invoice Finance<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../fund-an-invoice/index.html" class="tf-mega-wide-link">Fund an Invoice<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+<div>
+<span class="tf-mega-wide-group-label">Personal &amp; Property</span>
+<div class="tf-mega-wide-links">
+<a href="../../personal-and-property/second-mortgage/index.html" class="tf-mega-wide-link">Second Mortgage<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../../personal-and-property/self-employed-home-loans/index.html" class="tf-mega-wide-link">Self-Employed Home Loan<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../../personal-and-property/index.html" class="tf-mega-wide-link">All Personal &amp; Property loans<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+</div>
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Trade</span>
+<div class="tf-mega-wide-links">
+<a href="../trade-finance/index.html" class="tf-mega-wide-link">Trade Finance<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../export-finance/index.html" class="tf-mega-wide-link">Export Finance<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../supply-chain-funding/index.html" class="tf-mega-wide-link">Supply Chain Funding<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Equipment</span>
+<div class="tf-mega-wide-links">
+<a href="../finance-lease/index.html" class="tf-mega-wide-link">Finance Lease<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../operating-lease/index.html" class="tf-mega-wide-link">Operating Lease<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../chattel-mortgage/index.html" class="tf-mega-wide-link">Chattel Mortgage<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+</div>
+<div class="tf-mega-wide-foot">
+<a href="../compare-report/index.html" class="tf-mega-wide-link">Not sure which product?<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
 </div>
 </div>
 </div>
 <div class="tf-nav-item">
 <span class="tf-nav-link">Compare<span class="tf-caret" aria-hidden="true"></span></span>
-<div class="tf-mega-panel" style="min-width:240px">
-<a href="../compare-report/index.html"><span class="tf-mega-heading">Which Option is Best</span><div class="tf-mega-sub">See how our matching engine ranks 70+ lenders.</div></a>
+<div class="tf-mega-panel tf-mega-panel-wide">
+<div class="tf-mega-wide-inner">
+<a href="../compare-report/index.html" class="tf-mega-wide-lead">Compare your options<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<div class="tf-mega-wide-grid tf-mega-wide-grid-compact">
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Compare</span>
+<div class="tf-mega-wide-links">
+<a href="../compare-report/index.html" class="tf-mega-wide-link">Compare Report<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../meet-cashper/index.html" class="tf-mega-wide-link">Meet Cashper<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+<div class="tf-mega-wide-col">
+<span class="tf-mega-wide-group-label">Calculators</span>
+<div class="tf-mega-wide-links">
+<a href="../repayment-calculator/index.html" class="tf-mega-wide-link">Repayment Calculator<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="../equipment-calculator/index.html" class="tf-mega-wide-link">Equipment Finance Calculator<span class="tf-mega-arrow" aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <a href="../../home-shared/about/index.html" class="tf-nav-link">About</a>
@@ -154,20 +226,33 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.65;ma
 <section style="background:var(--bg-soft);padding:80px 0">
 <div class="container cp-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
 <div>
-<span class="eyebrow">Indicative Approval Limit</span>
-<h2 class="section-title" style="margin:14px 0 16px">See roughly what limit your revenue could support.</h2>
-<p style="font-size:0.95rem;line-height:1.65;color:var(--text-secondary);max-width:440px">Because a charge card is paid in full each month, there's no ongoing interest to estimate. Instead, adjust the slider to see an indicative approval limit based on your average monthly revenue &mdash; a starting point, not a quote.</p>
+<span class="eyebrow">Float Calculator</span>
+<h2 class="section-title" style="margin:14px 0 16px">Estimate your working capital float.</h2>
+<p style="font-size:0.95rem;line-height:1.65;color:var(--text-secondary);max-width:440px">A charge card's interest-free period means the cash you spend on it stays in your account for longer. Adjust your monthly card spend, payment term, and rewards rate to see the float and rewards this could generate.</p>
 </div>
 <div class="cp-calc-card">
 <div class="cp-calc-row">
-<div class="cp-calc-label"><span>Average monthly revenue</span><span id="revenueOut">$30,000</span></div>
-<input type="range" id="revenueSlider" data-slider data-slider-output="revenueOut" data-derive-output="limitOut" data-derive-formula="power" min="5000" max="200000" step="1000" value="30000">
+<div class="cp-calc-label"><span>Monthly card spend</span><span id="cc-spend-display">$80,000</span></div>
+<input type="range" id="cc-spend-slider" min="5000" max="500000" step="5000" value="80000">
+</div>
+<div class="cp-calc-row">
+<div class="cp-calc-label"><span>Payment terms</span></div>
+<select id="cc-term-select" class="cp-calc-select" style="width:100%;padding:10px 12px;border:1px solid var(--border-neutral);border-radius:6px;font-family:var(--font-heading);font-weight:500;font-size:0.9rem;color:var(--navy)">
+<option value="30">30 days</option>
+<option value="45" selected>45 days</option>
+<option value="55">55 days</option>
+</select>
+</div>
+<div class="cp-calc-row" style="margin-bottom:0">
+<div class="cp-calc-label"><span>Rewards rate (% cashback)</span><span id="cc-rate-display">1.5%</span></div>
+<input type="range" id="cc-rate-slider" min="0" max="3" step="0.1" value="1.5">
 </div>
 <div class="cp-calc-out">
-<div class="cp-calc-out-cell"><div class="cp-calc-out-label">Indicative approved limit</div><div class="cp-calc-out-value" id="limitOut">$90,000</div></div>
-<div class="cp-calc-out-cell"><div class="cp-calc-out-label">Interest on this balance</div><div class="cp-calc-out-value">$0*</div></div>
+<div class="cp-calc-out-cell"><div class="cp-calc-out-label">Working capital float</div><div class="cp-calc-out-value" id="cc-float">$120,000</div></div>
+<div class="cp-calc-out-cell"><div class="cp-calc-out-label">Annual card spend</div><div class="cp-calc-out-value" id="cc-annual-spend">$960,000</div></div>
+<div class="cp-calc-out-cell"><div class="cp-calc-out-label">Annual rewards earned</div><div class="cp-calc-out-value" id="cc-annual-rewards">$14,400</div></div>
 </div>
-<p class="cp-calc-note">*Assumes the balance is paid in full each billing cycle, as required on a charge card. Indicative limit shown as revenue &times; 3, illustrative only &mdash; actual limits are lender-specific and range up to $500,000. Your Compare Report shows the real limit each provider offers your business.</p>
+<p class="cp-calc-note">Illustrative only. Working capital float is your monthly spend scaled to the payment term (spend &times; term &divide; 30 days). Actual float, fees, and rewards depend on the provider and your spending pattern. Your Compare Report shows the real terms each provider offers your business.</p>
 </div>
 </div>
 </section>
@@ -318,5 +403,44 @@ details.faq p{padding:0 4px 20px;color:var(--text-secondary);line-height:1.65;ma
 </footer>
 
 <script src="../../assets/js/main.js"></script>
+<script>
+(function(){
+  var spendSlider = document.getElementById('cc-spend-slider');
+  var termSelect = document.getElementById('cc-term-select');
+  var rateSlider = document.getElementById('cc-rate-slider');
+  if (!spendSlider) return;
+
+  function fmt(n){ return '$' + Math.round(n).toLocaleString('en-AU'); }
+
+  function updateSliderFill(slider){
+    var pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+    slider.style.background = 'linear-gradient(90deg, var(--navy) ' + pct + '%, var(--border-neutral) ' + pct + '%)';
+  }
+
+  function render(){
+    var spend = Number(spendSlider.value);
+    var termDays = Number(termSelect.value);
+    var rate = Number(rateSlider.value);
+
+    document.getElementById('cc-spend-display').textContent = fmt(spend);
+    document.getElementById('cc-rate-display').textContent = rate.toFixed(1) + '%';
+    updateSliderFill(spendSlider);
+    updateSliderFill(rateSlider);
+
+    var float = spend * (termDays / 30);
+    var annualSpend = spend * 12;
+    var annualRewards = annualSpend * (rate / 100);
+
+    document.getElementById('cc-float').textContent = fmt(float);
+    document.getElementById('cc-annual-spend').textContent = fmt(annualSpend);
+    document.getElementById('cc-annual-rewards').textContent = fmt(annualRewards);
+  }
+
+  spendSlider.addEventListener('input', render);
+  termSelect.addEventListener('change', render);
+  rateSlider.addEventListener('input', render);
+  render();
+})();
+</script>
 </body>
 </html>

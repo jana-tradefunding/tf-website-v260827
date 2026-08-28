@@ -89,6 +89,127 @@
 }
 .tf-mega-sub { font-size: 0.78rem; color: var(--text-secondary); }
 
+/* --- MEGA PANEL: full-width variant (Products) --- */
+.tf-mega-panel.tf-mega-panel-wide {
+  position: fixed;
+  top: var(--nav-h, 80px);
+  left: 0;
+  min-width: 0;
+  width: 100vw;
+  max-width: 100vw;
+  max-height: none;
+  padding: 40px 0 28px;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-radius: 0;
+  background: var(--navy);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+.tf-nav-item:hover .tf-mega-panel.tf-mega-panel-wide,
+.tf-nav-item:focus-within .tf-mega-panel.tf-mega-panel-wide {
+  transform: translateY(0);
+}
+.tf-mega-wide-inner {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.tf-mega-panel-wide .tf-mega-wide-lead {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--white);
+  margin-bottom: 28px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0;
+  width: 100%;
+}
+.tf-mega-wide-lead .tf-mega-arrow { transition: transform var(--transition-fast); }
+.tf-mega-wide-lead:hover .tf-mega-arrow { transform: translateX(4px); }
+.tf-mega-wide-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.tf-mega-wide-col { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.tf-mega-wide-group-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.tf-mega-wide-links { display: flex; flex-direction: column; gap: 2px; }
+.tf-mega-panel-wide .tf-mega-wide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.82);
+  padding: 7px 0;
+  border-radius: 0;
+  transition: color var(--transition-fast);
+}
+.tf-mega-wide-link .tf-mega-arrow {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+.tf-mega-panel-wide .tf-mega-wide-link:hover { color: var(--white); background: none; transform: none; }
+.tf-mega-wide-link:hover .tf-mega-arrow { opacity: 1; transform: translateX(0); }
+.tf-mega-wide-foot {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.tf-mega-wide-foot .tf-mega-wide-link { color: var(--channel-accent); font-weight: 600; }
+.tf-mega-wide-foot .tf-mega-wide-link:hover { color: var(--white); }
+
+.tf-mega-wide-grid.tf-mega-wide-grid-compact {
+  grid-template-columns: repeat(2, minmax(200px, 240px));
+  justify-content: start;
+}
+.tf-mega-wide-grid.tf-mega-wide-grid-3 {
+  grid-template-columns: repeat(3, minmax(200px, 260px));
+  justify-content: start;
+}
+
+/* Static (non-interactive) descriptive item — used where a channel has no
+   dedicated page per feature, but the wide panel format still applies. */
+.tf-mega-wide-static-item { padding: 7px 0; }
+.tf-mega-wide-static-heading {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 2px;
+}
+.tf-mega-wide-static-sub { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+
+@media (max-width: 1080px) {
+  .tf-mega-wide-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .tf-mega-wide-grid,
+  .tf-mega-wide-grid.tf-mega-wide-grid-compact,
+  .tf-mega-wide-grid.tf-mega-wide-grid-3 { grid-template-columns: 1fr; gap: 24px; }
+  .tf-mega-wide-inner { padding: 0 20px; }
+}
+
 /* --- CHANNEL TOGGLE --- */
 .tf-toggle {
   display: inline-flex;
