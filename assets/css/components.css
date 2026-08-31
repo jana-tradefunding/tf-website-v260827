@@ -198,6 +198,12 @@
   grid-template-columns: repeat(3, minmax(200px, 260px));
   justify-content: start;
 }
+/* Full-bleed 3-equal-column spread — used for the neutral shared-page nav
+   (About/Contact/etc.) where Products is just the 3 channel links, not a
+   product catalog, and should fill the panel width like the homepage's. */
+.tf-mega-wide-grid.tf-mega-wide-grid-channels {
+  grid-template-columns: repeat(3, 1fr);
+}
 
 /* Static (non-interactive) descriptive item — used where a channel has no
    dedicated page per feature, but the wide panel format still applies. */
@@ -211,6 +217,7 @@
   margin-bottom: 2px;
 }
 .tf-mega-wide-static-sub { font-size: 0.78rem; color: var(--text-secondary); }
+.tf-mega-wide-sub { font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px; }
 
 @media (max-width: 1080px) {
   .tf-mega-wide-grid { grid-template-columns: repeat(3, 1fr); }
@@ -218,7 +225,8 @@
 @media (max-width: 900px) {
   .tf-mega-wide-grid,
   .tf-mega-wide-grid.tf-mega-wide-grid-compact,
-  .tf-mega-wide-grid.tf-mega-wide-grid-3 { grid-template-columns: 1fr; gap: 24px; }
+  .tf-mega-wide-grid.tf-mega-wide-grid-3,
+  .tf-mega-wide-grid.tf-mega-wide-grid-channels { grid-template-columns: 1fr; gap: 24px; }
   .tf-mega-wide-inner { padding: 0 20px; }
 }
 
@@ -339,6 +347,9 @@
   .tf-toggle { order: 2; flex-shrink: 1; min-width: 0; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
   .tf-toggle::-webkit-scrollbar { display: none; }
   .tf-toggle-tab { padding: 12px 10px; font-size: 0.72rem; }
+  /* Shared pages (About/Contact/etc.) show a Contact button here instead of
+     the channel toggle — give it the same slot so it doesn't wrap above the logo. */
+  .tf-nav-inner > .btn { order: 2; flex-shrink: 0; }
   .tf-nav-toggle-btn { order: 3; display: flex; }
   .tf-nav-links {
     order: 4;
